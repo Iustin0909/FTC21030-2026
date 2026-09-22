@@ -7,6 +7,7 @@ import org.firstinspires.ftc.teamcode._02_Actions.ClawActions;
 import org.firstinspires.ftc.teamcode._02_Actions.DrivetrainActions;
 import org.firstinspires.ftc.teamcode._02_Actions.ExtensionActions;
 import org.firstinspires.ftc.teamcode._02_Actions.HookActions;
+import org.firstinspires.ftc.teamcode._02_Actions.ShooterActions;
 
 public class Robot {
     private final LinearOpMode opMode;
@@ -16,6 +17,7 @@ public class Robot {
     public ExtensionActions extension;
     public ClawActions claw;
     public HookActions hook;
+    public ShooterActions shooter;
 
     public Robot(LinearOpMode opMode) {
         this.opMode = opMode;
@@ -26,6 +28,7 @@ public class Robot {
         extension = new ExtensionActions(opMode.hardwareMap);
         claw = new ClawActions(opMode.hardwareMap);
         hook = new HookActions(opMode.hardwareMap);
+        shooter = new ShooterActions(opMode.hardwareMap);
     }
     public void initialize() {
         drivetrain.initialize();
@@ -33,6 +36,7 @@ public class Robot {
         extension.initialize();
         claw.initialize();
         hook.initialize();
+        shooter.initialize();
     }
     public void start() {
         construct();

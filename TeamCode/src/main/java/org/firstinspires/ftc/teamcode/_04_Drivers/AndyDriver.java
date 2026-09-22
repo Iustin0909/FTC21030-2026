@@ -16,6 +16,7 @@ public class AndyDriver implements DriverInterface{
 
     @Override
     public void control() {
-    if(gamepad.left_stick_x )
+
+
     }
 }
